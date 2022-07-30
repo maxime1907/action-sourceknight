@@ -1,0 +1,17 @@
+name: "Sourceknight"
+author: "Maxime Leroy"
+branding:
+  icon: "code"
+  color: "gray-dark"
+description: "Build sourcemod plugins with sourceknight from an action"
+
+inputs:
+  cmd:
+    description: 'Sourceknight command'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cmd }}
